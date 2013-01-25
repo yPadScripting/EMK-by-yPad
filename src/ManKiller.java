@@ -1,4 +1,4 @@
-package EMK;
+
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -12,7 +12,6 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import org.powerbot.core.event.listeners.PaintListener;
 import org.powerbot.core.script.ActiveScript;
-import org.powerbot.core.script.job.Task;
 import org.powerbot.core.script.job.state.Node;
 import org.powerbot.core.script.job.state.Tree;
 import org.powerbot.game.api.Manifest;
@@ -83,7 +82,7 @@ public class ManKiller extends ActiveScript implements PaintListener, MouseListe
             jobs.add(new Combat());
             jobs.add(new Loot());
             jobs.add(new WalkToBank());
-            jobs.add(new BankingLoot());
+            jobs.add(new Banking());
             jobs.add(new WalkToBank());
             jobs.add(new WalkToHouse());
             container = new Tree(jobs.toArray(new Node[jobs.size()]));

@@ -1,4 +1,4 @@
-package EMK;
+
 
 import org.powerbot.core.script.job.Task;
 import org.powerbot.core.script.job.state.Node;
@@ -25,7 +25,7 @@ public class WalkToBank extends Node {
 
     @Override
     public boolean activate() {
-        if (Players.getLocal() != null && Inventory.isFull() && Players.getLocal().isIdle() && !BankingLoot.playerAtBank()) {
+        if (Players.getLocal() != null && Inventory.isFull() && Players.getLocal().isIdle() && !Banking.playerAtBank()) {
             return true;
         } else {
             return false;

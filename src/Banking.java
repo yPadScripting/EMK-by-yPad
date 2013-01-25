@@ -1,4 +1,4 @@
-package EMK;
+
 
 import org.powerbot.core.script.job.Task;
 import org.powerbot.core.script.job.state.Node;
@@ -19,7 +19,7 @@ import org.powerbot.game.api.wrappers.node.SceneObject;
  *
  * @author PimGame
  */
-public class BankingLoot extends Node {
+public class Banking extends Node {
 
     public final static Area area = new Area(new Tile[]{
                 new Tile(3089, 3500, 0), new Tile(3099, 3500, 0),

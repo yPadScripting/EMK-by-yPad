@@ -1,5 +1,4 @@
 
-package EMK;
 
 import org.powerbot.game.api.methods.Widgets;
 import org.powerbot.game.api.util.Filter;
