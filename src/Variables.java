@@ -1,5 +1,6 @@
 
 
+import java.util.ArrayList;
 import org.powerbot.game.api.methods.Widgets;
 import org.powerbot.game.api.util.Filter;
 import org.powerbot.game.api.wrappers.interactive.NPC;
@@ -17,7 +18,8 @@ import org.powerbot.game.api.wrappers.widget.WidgetChild;
 public class Variables {
 
     public final static int[] MAN_IDS = {1, 2, 3};
-    public static int[] LOOT_IDS = new int[15]; //= {526, 995, 2485, 3049, 217, 211, 207, 1440};
+   // public static int[] LOOT_IDS = new int[15]; //= {526, 995, 2485, 3049, 217, 211, 207, 1440};
+    public static ArrayList<Integer> LOOT_IDS = new ArrayList<Integer>();
     public final static int[] ABILITY_IDS = {0, 35, 39, 42, 45, 48, 51, 54, 57, 60};
     public static Filter<WidgetChild> WIDGET_FILTER = new Filter<WidgetChild>() {
 
@@ -57,9 +59,5 @@ public class Variables {
     };
 
     public Variables() {
-    }
-
-    public static void fillLootIds(int[] loot) {
-        LOOT_IDS = loot;
     }
 }

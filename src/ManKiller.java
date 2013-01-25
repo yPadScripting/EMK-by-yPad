@@ -1,5 +1,4 @@
 
-
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -52,7 +51,7 @@ public class ManKiller extends ActiveScript implements PaintListener, MouseListe
 
     public void onStart() {
         System.out.println("Welcome to the Edgeville Man Killer!");
-        Camera.setPitch(1000);
+        Camera.setPitch(89);
 
         g.setVisible(true);
     }
@@ -101,33 +100,27 @@ public class ManKiller extends ActiveScript implements PaintListener, MouseListe
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        p = e.getPoint();
-        if (hidebutton.contains(p) && !hide) {
-            hide = true;
-        } else if (hidebutton.contains(p) && hide) {
-            hide = false;
+        if (hidebutton.contains(Mouse.getLocation())) {
+            hide = !hide;
         }
+
 
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @SuppressWarnings("serial")
@@ -261,28 +254,26 @@ public class ManKiller extends ActiveScript implements PaintListener, MouseListe
         }// </editor-fold>
 
         private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {
-            int[] loot = new int[15];
             if (BonesBox.isSelected()) {
-                loot[0] = 526;
+                Variables.LOOT_IDS.add(526);
             }
             if (HerbsBox.isSelected()) {
-                loot[1] = 207;
-                loot[2] = 213;
-                loot[3] = 209;
-                loot[4] = 211;
-                loot[5] = 215;
-                loot[6] = 217;
-                loot[7] = 2485;
+                Variables.LOOT_IDS.add(207);
+                Variables.LOOT_IDS.add(213);
+                Variables.LOOT_IDS.add(209);
+                Variables.LOOT_IDS.add(211);
+                Variables.LOOT_IDS.add(215);
+                Variables.LOOT_IDS.add(217);
+                Variables.LOOT_IDS.add(2485);
             }
             if (TallyBox.isSelected()) {
-                loot[8] = 1440;
+                Variables.LOOT_IDS.add(1440);
             }
             if (CoinsBox.isSelected()) {
-                loot[9] = 995;
+                Variables.LOOT_IDS.add(995);
             }
             this.dispose();
             guiWait = false;
-            Variables.fillLootIds(loot);
         }
 
         /**
